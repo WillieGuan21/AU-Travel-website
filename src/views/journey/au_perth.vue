@@ -53,10 +53,11 @@ export default {
 
 <style scoped>
 .circles {
-  @apply bg-yellow-500 rounded-full text-center cursor-pointer my-10;
+  @apply rounded-full text-center cursor-pointer my-10;
   width: 6rem;
   height: 6rem;
   line-height: 6rem;
+  background-color: #dbc8aa;
 }
 @media (max-width: 640px) {
   .circles {
