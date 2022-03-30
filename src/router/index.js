@@ -12,14 +12,30 @@ const routes = [
     },
     component: Home,
   },
-  // {
-  //   path: "/auth",
-  //   name: "Auth",
-  //   meta: {
-  //     title: "auth",
-  //   },
-  //   component: () => import("../views/auth/index.vue"),
-  // },
+  {
+    path: "/about",
+    name: "About",
+    meta: {
+      title: "About",
+    },
+    component: () => import("../views/about/index.vue"),
+  },
+  {
+    path: "/journey",
+    name: "Journey",
+    meta: {
+      title: "Journey",
+    },
+    component: () => import("../views/journey/au_perth.vue"),
+  },
+  {
+    path: "/gallery",
+    name: "Gallery",
+    meta: {
+      title: "Gallery",
+    },
+    component: () => import("../views/gallery/index.vue"),
+  },
   // {
   //   path: "/warningSetting",
   //   name: "WarningSetting",
