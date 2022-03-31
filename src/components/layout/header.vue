@@ -2,9 +2,7 @@
   <div class="header">
     <Menubar :model="functionList" @click.stop="menuClickEvent">
       <template #start>
-        <div class="mr-5 font-bold text-3xl cursor-pointer" @click="getHomeEvent">
-          Travel Memory
-        </div>
+        <div class="mr-5 font-bold text-xl cursor-pointer" @click="getHomeEvent">Travel Memory</div>
       </template>
     </Menubar>
   </div>
@@ -71,7 +69,7 @@ export default {
     .p-submenu-icon {
       color: black !important;
     }
-    font-size: 21px;
+    font-size: 18px;
     &:hover,
     &.p-menuitem-active {
       .p-menuitem-text,

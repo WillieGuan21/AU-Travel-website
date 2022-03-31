@@ -24,17 +24,17 @@ export const day1 = [
 export const day2 = [
   {
     title: "Sydeny",
-    img: "https://fakeimg.pl/400x400/",
+    img: "https://fakeimg.pl/1920x1080/",
     text: "Vivamus eget lacinia arcu, id efficitur ex. Aliquam erat volutpat. Suspendisse potenti. Vestibulum elit mi, dignissim sit amet viverra a, tincidunt vitae est. Vivamus tincidunt sapien quis mi lacinia faucibus. ",
   },
   {
     title: "",
-    img: "https://fakeimg.pl/400x400/",
+    img: "https://fakeimg.pl/1920x1080/",
     text: "Vivamus eget lacinia arcu, id efficitur ex. Aliquam erat volutpat. Suspendisse potenti. Vestibulum elit mi, dignissim sit amet viverra a, tincidunt vitae est. Vivamus tincidunt sapien quis mi lacinia faucibus. ",
   },
   {
     title: "Sydeny",
-    img: "https://fakeimg.pl/400x400/",
+    img: "https://fakeimg.pl/1920x1080/",
     text: "",
   },
   {

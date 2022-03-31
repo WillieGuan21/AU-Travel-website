@@ -4,7 +4,7 @@
     <div class="main-container">
       <slot />
     </div>
-    <footerComp class="foot" />
+    <footerComp />
   </div>
 </template>
 
@@ -27,16 +27,16 @@ export default defineComponent({
 
 <style lang="scss">
 .default {
-  @apply flex min-h-screen flex-col;
+  @apply flex min-h-screen flex-col mx-auto;
+  max-width: 1440px;
   .main-container {
     @apply mx-auto w-full overflow-y-auto;
     // flex: 1 0 0;
-    max-width: 1920px;
   }
 }
-.foot {
-  bottom: 0;
-  position: fixed;
-  width: 100%;
+@media screen and (max-width: 1068) {
+  .default {
+    max-width: 772px;
+  }
 }
 </style>
