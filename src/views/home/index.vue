@@ -1,7 +1,25 @@
 <template>
-  <div class="mb-10 px-6">
+  <div class="mb-10 p-6">
     <div>
-      <img src="https://fakeimg.pl/1920x1080/" />
+      <!-- <img src="https://fakeimg.pl/1920x1080/" /> -->
+
+      <Carousel
+        :value="mycarousel"
+        :numVisible="1"
+        :numScroll="1"
+        :circular="true"
+        :autoplayInterval="3000"
+      >
+        <template #item="slotProps">
+          <div class="product-item">
+            <div class="product-item-content">
+              <div class="p-mb-3">
+                <img :src="slotProps.data.img" :alt="slotProps.data.name" class="product-image" />
+              </div>
+            </div>
+          </div>
+        </template>
+      </Carousel>
     </div>
     <div class="grid grid-cols-2 gap-4 mt-6">
       <div><img src="https://fakeimg.pl/500x400/" /></div>
@@ -20,7 +38,28 @@
 </template>
 
 <script>
-export default {};
+import { ref } from "vue";
+
+export default {
+  setup() {
+    const mycarousel = ref([
+      {
+        img: "https://fakeimg.pl/1920x1080/?text=Hello",
+        name: "Hello",
+      },
+      {
+        img: "https://fakeimg.pl/1920x1080/?text=Kenar",
+        name: "Kenar",
+      },
+      {
+        img: "https://fakeimg.pl/1920x1080/?text=Paramer",
+        name: "Paramer",
+      },
+    ]);
+
+    return { mycarousel };
+  },
+};
 </script>
 
 <style></style>

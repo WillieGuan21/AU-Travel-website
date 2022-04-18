@@ -13,10 +13,14 @@ import Checkbox from "primevue/checkbox";
 import RadioButton from "primevue/radiobutton";
 import AutoComplete from "primevue/autocomplete";
 import Textarea from "primevue/textarea";
+import Carousel from "primevue/carousel";
+import Galleria from "primevue/galleria";
 import "primevue/resources/themes/saga-blue/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 export default (app) => {
+  app.component("Galleria", Galleria);
+  app.component("Carousel", Carousel);
   app.component("InputText", InputText);
   app.component("InputSwitch", InputSwitch);
   app.component("Button", Button);

@@ -29,8 +29,10 @@ export default defineComponent({
 .default {
   @apply flex min-h-screen flex-col mx-auto;
   max-width: 1440px;
+
   .main-container {
-    @apply mx-auto w-full overflow-y-auto;
+    @apply mx-auto w-full overflow-y-auto text-base;
+
     // flex: 1 0 0;
   }
 }

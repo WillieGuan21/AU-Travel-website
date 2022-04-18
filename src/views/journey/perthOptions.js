@@ -1,6 +1,7 @@
 export const day1 = [
   {
     title: "Natur Winows",
+    day: "12．03．2022",
     img: "https://fakeimg.pl/400x400/",
     text: "Maecenas ex purus, finibus hendrerit pretium id, venenatis id risus. Vestibulum quam diam, eleifend tincidunt arcu eu, fringilla varius velit. Morbi commodo orci at sapien tempus, id ultrices arcu ultricies. Nullam ut dui sem. Vestibulum tincidunt rhoncus neque.",
   },
@@ -24,6 +25,7 @@ export const day1 = [
 export const day2 = [
   {
     title: "Sydeny",
+    day: "13．03．2022",
     img: "https://fakeimg.pl/1920x1080/",
     text: "Vivamus eget lacinia arcu, id efficitur ex. Aliquam erat volutpat. Suspendisse potenti. Vestibulum elit mi, dignissim sit amet viverra a, tincidunt vitae est. Vivamus tincidunt sapien quis mi lacinia faucibus. ",
   },
@@ -47,6 +49,7 @@ export const day2 = [
 export const day3 = [
   {
     title: "Bondi",
+    day: "14．03．2022",
     img: "https://fakeimg.pl/400x400/",
     text: "Duis maximus at mi vitae mattis. Duis quis tellus tincidunt, lacinia sapien eget, luctus lacus. Nunc suscipit hendrerit tempor. Vestibulum tempor justo nec nisi scelerisque gravida. ",
   },

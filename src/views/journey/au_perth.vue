@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10 px-6">
+  <div class="mb-10 p-6">
     <div class="grid grid-cols-4 sm:grid-cols-7">
       <div
         class="circles"
@@ -12,12 +12,22 @@
       </div>
     </div>
     <div class="mt-10" v-for="item in result" :key="item.id">
-      <div class="text-xl font-bold">{{ item.title }}</div>
-      <div class="text-base">2001/08/11</div>
+      <div class="flex items-center text-xl font-bold mb-4">
+        <div class="" :class="[item.day ? 'border-r-2 border-black pr-3' : '']">
+          {{ item.title }}
+        </div>
+        <div class="pl-3">{{ item.day }}</div>
+      </div>
+
       <div :class="[item.text ? 'md:grid grid-cols-2 gap-4' : '']">
         <img :src="item.img" />
-        <div class="text-base">{{ item.text }}</div>
+        <div>{{ item.text }}</div>
       </div>
+
+      <!-- <div class="relative">
+        <img :class="[item.text ? 'w-4/5' : '']" :src="item.img" />
+        <div :class="[item.text ? 'card-body' : '']">{{ item.text }}</div>
+      </div> -->
     </div>
 
     <div class="circles gotop" v-show="scY > 300" @click="toTop">
@@ -119,5 +129,14 @@ export default {
   position: fixed;
   right: 1rem;
   bottom: 3rem;
+}
+
+.card-body {
+  @apply absolute  bg-white;
+  width: 25rem;
+  float: right;
+  right: 15px;
+  padding: 40px;
+  bottom: 16rem;
 }
 </style>
