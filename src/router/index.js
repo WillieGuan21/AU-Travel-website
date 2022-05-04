@@ -36,6 +36,14 @@ const routes = [
     },
     component: () => import("../views/gallery/index.vue"),
   },
+  {
+    path: "/test",
+    name: "test",
+    meta: {
+      title: "test",
+    },
+    component: () => import("../views/gallery/test.vue"),
+  },
   // {
   //   path: "/warningSetting",
   //   name: "WarningSetting",

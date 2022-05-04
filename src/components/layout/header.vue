@@ -31,6 +31,9 @@ export default {
       {
         label: "Gallery",
       },
+      {
+        label: "test",
+      },
     ]);
 
     const routeObj = router.options.routes.reduce(

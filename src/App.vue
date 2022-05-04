@@ -1,7 +1,6 @@
-
 <template>
   <Layout>
-    <router-view class="overflow-y-auto" style="flex: 1 0 0" />
+    <router-view class="" style="flex: 1 0 0" />
   </Layout>
 </template>
 
@@ -10,7 +9,7 @@ import Layout from "./components/layout/index.vue";
 export default {
   components: { Layout },
   setup() {
-    return {  };
+    return {};
   },
 };
 </script>

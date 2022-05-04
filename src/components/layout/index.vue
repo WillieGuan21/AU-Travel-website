@@ -28,13 +28,15 @@ export default defineComponent({
 <style lang="scss">
 .default {
   @apply flex min-h-screen flex-col mx-auto;
-  max-width: 1440px;
+  max-width: 1024px;
 
   .main-container {
-    @apply mx-auto w-full overflow-y-auto text-base;
+    @apply mx-auto w-full  text-base;
 
     // flex: 1 0 0;
   }
+
+  font-family: Verdana, Arial, "Comic Sans MS", STHeiti, "Microsoft JhengHei";
 }
 @media screen and (max-width: 1068) {
   .default {
