@@ -21,7 +21,7 @@
         <img :src="slotProps.item.thumb" :alt="slotProps.item.alt" style="display: block" />
       </template>
     </Galleria>
-    <div v-if="waterfallList">
+    <div v-if="waterfallList" class="flex justify-center mt-6">
       <div class="v-waterfall-content" id="v-waterfall">
         <div
           v-for="(img, index) in waterfallList"
@@ -42,7 +42,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 
 const activeIndex = ref(0);
 const displayCustom = ref(false);
@@ -76,7 +76,7 @@ const ImgBottom = ref(10);
 const deviationHeight = ref([]);
 const imgList = ref([]);
 // const screenWidth = ref(document.body.clientWidth);
-const screenWidth = ref(1000);
+const screenWidth = ref(1024);
 const timer = ref(false);
 
 onMounted(() => {
@@ -85,26 +85,35 @@ onMounted(() => {
     return (() => {
       window.screenWidth = document.body.clientWidth;
       if (window.screenWidth >= 1024) {
-        screenWidth.value = 1000;
+        screenWidth.value = 1024;
       } else {
-        screenWidth.value = window.screenWidth - 70;
+        screenWidth.value = window.screenWidth - 40;
       }
     })();
   };
 });
-watch(screenWidth, (cur, pre) => {
-  // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
-  if (!timer.value) {
-    // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
-    screenWidth.value = cur;
-    timer.value = true;
+watch(
+  screenWidth,
+  (cur, pre) => {
+    // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
+    if (!timer.value) {
+      // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
+      screenWidth.value = cur;
+      timer.value = true;
 
-    setTimeout(function () {
-      calculationWidth();
-      timer.value = false;
-    }, 400);
-  }
-});
+      setTimeout(function () {
+        calculationWidth();
+        timer.value = false;
+      }, 400);
+    }
+    window.screenWidth = document.body.clientWidth;
+    if (window.screenWidth < 1024) {
+      screenWidth.value = window.screenWidth;
+    }
+  },
+  { immediate: true }
+);
+
 const getPic = () => {
   // const {data: res} = await axios.get('http://127.0.0.1:5000/pics')
   // 通过访问网络资源模拟获取图片路径
@@ -282,6 +291,12 @@ const filterMin = () => {
   return deviationHeight.value.indexOf(min);
 };
 
+const aa = () => {
+  window.screenWidth = document.body.clientWidth;
+  if (window.screenWidth < 1024) {
+    console.log(window.screenWidth);
+  }
+};
 getPic();
 </script>
 
@@ -291,11 +306,12 @@ getPic();
   overflow-x: hidden;
 }
 .v-waterfall-content {
-  width: 100%;
+  width: 1024px;
   height: 83vh;
   position: relative;
-  /* overflow-x: hidden; */
-  margin: 10px;
+  /* margin: auto; */
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .v-waterfall-item {
   position: absolute;

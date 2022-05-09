@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10 p-6">
+  <div class="mb-10 p-6" style="max-width: 1024px">
     <div class="grid grid-cols-4 sm:grid-cols-7">
       <div
         class="circles"

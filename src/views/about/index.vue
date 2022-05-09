@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10 p-6">
+  <div class="mb-10 p-6" style="max-width: 1024px">
     <div class="grid grid-cols-3 gap-4">
       <div>
         <div class="py-10 text-2xl">About Us</div>

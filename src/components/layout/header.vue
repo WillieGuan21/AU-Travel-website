@@ -57,7 +57,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  @apply border-b;
+  @apply border-b w-full;
   // background-color: ;
 
   .p-menubar {

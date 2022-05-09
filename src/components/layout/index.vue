@@ -27,11 +27,11 @@ export default defineComponent({
 
 <style lang="scss">
 .default {
-  @apply flex min-h-screen flex-col mx-auto;
-  max-width: 1024px;
+  @apply flex min-h-screen flex-col mx-auto items-center;
+  // max-width: 1024px;
 
   .main-container {
-    @apply mx-auto w-full  text-base;
+    @apply mx-auto w-full  text-base flex justify-center;
 
     // flex: 1 0 0;
   }
