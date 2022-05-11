@@ -25,11 +25,9 @@
       <div class="m-auto"><img src="https://fakeimg.pl/500x400/" /></div>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis consectetur
-          dolor, at pellentesque leo rutrum porta. Sed interdum justo vel nisi sagittis elementum.
-          Nullam nunc est, efficitur at mauris et, fringilla aliquam risus. Praesent faucibus enim
-          nec eleifend rutrum. Phasellus vel odio vitae urna pharetra tincidunt pretium quis ligula.
-          Quisque id varius dui, eu sodales orci.
+          In 2020 We back to Australia, for us that was really excited. After a long time, to entries Australia at Perth was feeling like yesterday. In last year COVID-19
+           devour the world, we were lucky been save and enjoy this journey, and this journey was my pre-wedding photos. It means a lot to me in here, because Perth is the first place when I come in Australia,
+            and in Australia was I fall in love with my wife. That's go to see our traveling. 
         </p>
         <Button label="See More" class="mt-5" @click="changeRouter" />
       </div>
