@@ -21,8 +21,8 @@
         </template>
       </Carousel>
     </div>
-    <div class="grid grid-cols-2 gap-4 mt-6">
-      <div><img src="https://fakeimg.pl/500x400/" /></div>
+    <div class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
+      <div class="m-auto"><img src="https://fakeimg.pl/500x400/" /></div>
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis consectetur
@@ -31,7 +31,7 @@
           nec eleifend rutrum. Phasellus vel odio vitae urna pharetra tincidunt pretium quis ligula.
           Quisque id varius dui, eu sodales orci.
         </p>
-        <Button label="See More" class="mt-5" />
+        <Button label="See More" class="mt-5" @click="changeRouter" />
       </div>
     </div>
   </div>
@@ -39,6 +39,7 @@
 
 <script>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
   setup() {
@@ -56,8 +57,12 @@ export default {
         name: "Paramer",
       },
     ]);
+    const router = useRouter();
+    const changeRouter = () => {
+      router.push({ name: "Journey" });
+    };
 
-    return { mycarousel };
+    return { mycarousel, changeRouter };
   },
 };
 </script>
