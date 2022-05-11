@@ -87,7 +87,7 @@ onMounted(() => {
       if (window.screenWidth >= 1024) {
         screenWidth.value = 1024;
       } else {
-        screenWidth.value = window.screenWidth - 40;
+        screenWidth.value = window.screenWidth;
       }
     })();
   };
@@ -108,7 +108,7 @@ watch(
     }
     window.screenWidth = document.body.clientWidth;
     if (window.screenWidth < 1024) {
-      screenWidth.value = window.screenWidth;
+      screenWidth.value = window.screenWidth - 40;
     }
   },
   { immediate: true }
