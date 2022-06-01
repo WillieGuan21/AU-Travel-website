@@ -3,17 +3,17 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/home/index.vue";
 import Login from "../views/login.vue"
 const routes = [
+  // {
+  //   path: "/",
+  //   name: "Home",
+  //   meta: {
+  //     title: "home page",
+  //     keepAlive: true,
+  //   },
+  //   components: Home,
+  // },
   {
     path: "/",
-    name: "Home",
-    meta: {
-      title: "home page",
-      keepAlive: true,
-    },
-    components: Home,
-  },
-  {
-    path: "/login",
     name: "Login",
     meta: {
       title: "login page",

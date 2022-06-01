@@ -47,6 +47,10 @@ export default {
       // return store.state.place;
       return sessionStorage.getItem("currName");
     });
+    watch(Introduce, (cur, old) => {}, {
+      immediate: true,
+    });
+
     const functionList = ref([
       {
         label: Introduce,
@@ -101,8 +105,8 @@ export default {
 
     watch(isActive, (cur, pre) => {}, { immediate: true }); //用watch去監聽 isActive
 
-    const aa = document.getElementsByClassName("p-menubar-mobile-active")
-    console.log(aa)
+    const aa = document.getElementsByClassName("p-menubar-mobile-active");
+    console.log(aa);
     return { userInfo, functionList, getHomeEvent, menuClickEvent, currName };
   },
 };
@@ -155,38 +159,37 @@ export default {
 }
 @media (max-width: 960px) {
   .header {
-    ::v-deep(.p-menubar){
+    ::v-deep(.p-menubar) {
       padding: 60px 80px 0px 80px;
     }
   }
   ::v-deep(.p-menubar .p-menubar-button) {
-    right:0;
-    margin-left:auto;
+    right: 0;
+    margin-left: auto;
     .pi {
       font-size: 30px;
-      color:#000
+      color: #000;
     }
   }
-  ::v-deep(.p-menubar.p-menubar-mobile-active .p-menubar-root-list){
+  ::v-deep(.p-menubar.p-menubar-mobile-active .p-menubar-root-list) {
     text-align: center;
-    background:white;
+    background: white;
     box-shadow: none;
-    width:100% !important;
-    li{
-      margin:30px;
+    width: 100% !important;
+    li {
+      margin: 30px;
     }
   }
-  ::v-deep(.p-menubar-mobile-active){
-    .header{
-      padding-bottom:100%;
+  ::v-deep(.p-menubar-mobile-active) {
+    .header {
+      padding-bottom: 100%;
     }
   }
 }
 
-@media (max-width: 420px){
+@media (max-width: 420px) {
   .header {
-    
-    ::v-deep(.p-menubar){
+    ::v-deep(.p-menubar) {
       padding: 40px 16px 0px 16px;
     }
   }
