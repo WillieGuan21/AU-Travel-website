@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10 p-6" style="max-width: 1024px">
+  <div class="mb-10 p-6" style="max-width: 1440px">
     <div>
       <!-- <img src="https://fakeimg.pl/1920x1080/" /> -->
 

@@ -6,8 +6,9 @@
 
 <script>
 import Layout from "./components/layout/index.vue";
+// import Layout from "./views/login.vue"
 export default {
-  components: { Layout },
+  components: { Layout},
   setup() {
     return {};
   },

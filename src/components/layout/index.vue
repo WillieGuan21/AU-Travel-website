@@ -1,17 +1,18 @@
 <template>
   <div class="default">
-    <headerComp />
+    <headerComp v-show="showArea"/>
     <div class="main-container">
       <slot />
     </div>
-    <footerComp />
+    <footerComp v-show="showArea"/>
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 import footerComp from "./footer.vue";
 import headerComp from "./header.vue";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "DefaultLayout",
@@ -20,7 +21,13 @@ export default defineComponent({
     headerComp,
   },
   setup() {
-    return {};
+const router = useRouter();
+const showArea = computed(()=>{  //讓一些特定頁面，不要出現header and footer
+  const routerName = router.currentRoute.value.name
+  return routerName ? !['Login'].some(name => routerName === name) : false
+})
+
+    return {showArea};
   },
 });
 </script>

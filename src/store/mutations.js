@@ -1,5 +1,5 @@
 export default {
-  m_setUserName(state, value) {
-    state.user.name = value
+  m_setplace(state, value) {
+    state.place = value
   }
 };

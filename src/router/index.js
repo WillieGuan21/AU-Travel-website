@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 // import store from "../store";
 import Home from "../views/home/index.vue";
+import Login from "../views/login.vue"
 const routes = [
   {
     path: "/",
@@ -8,31 +9,40 @@ const routes = [
     meta: {
       title: "home page",
       keepAlive: true,
-      name: "Home",
     },
-    component: Home,
+    components: Home,
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/login",
+    name: "Login",
     meta: {
-      title: "About",
+      title: "login page",
+      keepAlive: true,
+      name: "Login",
     },
-    component: () => import("../views/about/index.vue"),
+    component: Login,
+  },
+  {
+    path: "/introduce",
+    name: "WESTERN AUSTRALIA",
+    meta: {
+      title: "WESTERN AUSTRALIA",
+    },
+    component: () => import("../views/introduce/westenAu.vue"),
   },
   {
     path: "/journey",
-    name: "Journey",
+    name: "JOURNEY",
     meta: {
-      title: "Journey",
+      title: "JOURNEY",
     },
     component: () => import("../views/journey/au_perth.vue"),
   },
   {
     path: "/gallery",
-    name: "Gallery",
+    name: "GALLERY",
     meta: {
-      title: "Gallery",
+      title: "GALLERY",
     },
     component: () => import("../views/gallery/index.vue"),
   },
