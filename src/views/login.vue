@@ -196,8 +196,8 @@ const isActive = ref(false);
 const router = useRouter();
 const changeRouter = (name, val) => {
   router.push({ name: name });
-  // store.commit("m_setplace", val);
-  sessionStorage.setItem("currName", val);
+  store.commit("m_setplace", val);
+  // sessionStorage.setItem("currName", val);
 };
 </script>
 

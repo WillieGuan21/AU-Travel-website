@@ -42,14 +42,17 @@ export default {
       id: store.state.user.id,
       name: store.state.user.name,
     }));
+
     const Introduce = computed(() => {
       //取store state 名稱
-      // return store.state.place;
-      return sessionStorage.getItem("currName");
+      return store.state.place;
+      // return sessionStorage.getItem("currName");
     });
-    watch(Introduce, (cur, old) => {}, {
-      immediate: true,
-    });
+    
+    // watch(Introduce, (cur, old) => {
+    // }, {
+    //   immediate: true,
+    // });
 
     const functionList = ref([
       {
